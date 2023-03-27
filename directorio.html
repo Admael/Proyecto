@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directorio</title>
+    <link rel="icon" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"
+    /> <!--Fuente Poppins sacada de Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,200" /> <!--Simbolo menu-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"
+    /> <!---Simbolos sacados de Google Icons-->
+    <link href="./styles.css" rel="stylesheet" /> <!---Hoja de estilos externa-->
+  </head>
+  <body>
+    <div class="background"></div> 
+    <nav class="navbar"> <!---Parte superior (barra de navegación)-->
+      <img class="navbar-logo" src="assets/logo.png" /> <!---Logo de la pagina-->
+      <input type="text" placeholder="Busqueda" class="navbar-search" />
+    </nav>
+    <button class="navbar-burger" onclick="toggleMenu()">
+      <span class="material-symbols-rounded">
+        menu
+      </span>
+    </button> <!--Icono para abrir el menu-->
+    <nav class="menu">
+      <a href="index.html" style="animation-delay: 0.1s">Inicio</a>
+      <a href="acercade.html" style="animation-delay: 0.2s">Acerca de</a>
+      <a href="directorio.html" style="animation-delay: 0.3s">Directorio</a>
+      <a href="updt.html" style="animation-delay: 0.4s">Un poco de todo</a>
+      <a href="contacto.html" style="animation-delay: 0.5s">Contacto</a>
+    </nav>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+    </script>
+  </body>
+</html>

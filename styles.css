@@ -1,0 +1,172 @@
+@import url(assets/iconobusqueda.svg);
+/*Estilos en toda la página*/
+* {
+  box-sizing: border-box; /*Padding y bordes sin necesidad de hacer varios ajustes*/
+}
+/*Funcionalidad del boton que desplegua el menu*/
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar,
+.navbar-burger,
+.menu,
+.background {
+  position: fixed;
+  color: #120453;
+}
+
+.background {
+  z-index: 1; /*No cambiar este número*/
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgb(216, 146, 129) 7%, rgb(119, 85, 182) 83%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding-left: 2px;
+  padding-right: 72px;
+  background: #031d2950;
+}
+
+.navbar > button {
+  font-size: 200px;
+}
+
+.navbar-logo {
+  height: 300px;
+  padding-bottom: 30px;
+  padding-left: 1px;
+}
+
+.navbar-burger {
+  z-index: 3;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar-search {
+  border: 0;
+  height: 40px;
+  background: #0d0a5573 url("assets/search.svg"); /*No borrar esto, es importante para la funcionalidad del estilo de la barra de busqueda*/
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+  border: 0;
+  border-radius: 6px;
+  padding-left: 36px;
+  width: 180px;
+  font-size: 16px;
+  font-family: "Euclid Circular A";
+  background-image: url(assets/iconobusqueda.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 7px 8px;
+  background-color: rgba(0, 255, 255, 0.212);
+}
+
+.navbar-search::placeholder {
+  color: #002721;
+  font-family: monospace;
+}
+
+.menu {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+  background: rgba(134, 75, 182, 0.692);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > a {
+  color: #17464e;
+  font-size: 32px;
+  font-family: "Euclid Circular A",fantasy,cursive;
+  text-decoration: none;
+  letter-spacing: 6px;
+  transform-style: preserve-3d;
+  transition: all 1s ease-out;
+}
+/*Animación al abrir el menu*/
+body.open .menu > a {
+  animation: appear 3s both;
+}
+/*Aparición del menu conectada con la Animación*/
+@keyframes appear {
+  10% {
+    opacity: 0;
+    translate: 0 100px;
+  }
+  100% {
+    opacity: 5;
+  }
+}
+.menu > a:hover{
+  color: rgb(140, 42, 165);
+  transform: scale3d(1.2, 1.2, 1.2) rotateY(30deg);
+  transform-origin: center center;
+}
+
+
+/*EXCLUSIVO DE ACERCA DE*/
+h1 {
+  color: rgb(102, 84, 0);
+  font-family: fantasy;
+  padding-bottom: 370px;
+  position: fixed;
+  margin-top: 13%;
+}
+h1 img{
+  width: 28px;
+}
+#texto1 {
+  width: 80%; /* ajusta este valor a tu gusto */
+  margin: 0 auto; /* establece los márgenes laterales en "auto" */
+  padding: 20px;
+  font-family:cursive;
+  font-size: 14px;
+  color: #212700;
+  margin-top: 100px;
+}
+#perrito{
+  position: fixed;
+}
